@@ -1,0 +1,18 @@
+service: otp-co2
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  hello:
+    handler: handler.plan
+    events:
+      - httpApi:
+          method: GET
+          path: /plan
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline
