@@ -48,7 +48,7 @@ export async function plan(event) {
   } catch (error) {
     console.log(error)
     return {
-      statusCode: 500,
+      status: 500,
       message: 'Internal server error!',
       error,
     }
